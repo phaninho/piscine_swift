@@ -13,6 +13,7 @@ class ViewController: UIViewController
 
     var     numOnScreen:Double = 0;
     var     prevNum:Double = 0;
+    var     resul:Double = 0;
     var     perfCal = false;
     var     operat = 0;
     
@@ -40,7 +41,14 @@ class ViewController: UIViewController
         if (resLabel.text != "" && sender.tag != 11 && sender.tag != 12 && sender.tag != 17)
         {
 //            print("prev ",prevNum, " ", numOnScreen)
-            prevNum = numOnScreen;
+            if (resul != 0)
+            {
+                prevNum = resul;
+            }
+            else
+            {
+                prevNum = numOnScreen;
+            }
             if (sender.tag == 13) //div
             {
                 resLabel.text = "/"
@@ -90,7 +98,20 @@ class ViewController: UIViewController
                 resLabel.text = String(prevNum+numOnScreen)
             }
             print(prevNum, " ", numOnScreen)
-            numOnScreen = Double(resLabel.text!)!
+            resul = Double(resLabel.text!)!
+            prevNum = resul;
+            print(resul);
+        }
+        else if (resLabel.text != "" && sender.tag == 12)
+        {
+            if (numOnScreen > 0)
+            {
+                resLabel.text = "-"+String(numOnScreen);
+            }
+            else
+            {
+                resLabel.text = String(numOnScreen*(-1));
+            }
         }
         else if (sender.tag == 11)
         {
@@ -98,6 +119,7 @@ class ViewController: UIViewController
             numOnScreen = 0;
             prevNum = 0;
             operat = 0;
+            resul = 0;
             perfCal = false;
         }
     }
