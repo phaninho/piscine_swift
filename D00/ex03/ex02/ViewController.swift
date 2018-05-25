@@ -16,57 +16,76 @@ class ViewController: UIViewController
     var     resul:Double = 0;
     var     perfCal = false;
     var     operat = 0;
+    var     reset = false;
+    var     continu = false
+    var     first = false
     
     @IBOutlet weak var resLabel: UILabel!
     
     @IBAction func numBtn(_ sender: UIButton)
     {
+       
+        if (reset == true)
+        {
+            clearAll()
+        }
         if (perfCal == true)
         {
             resLabel.text = String(sender.tag-1)
-            numOnScreen = Double(resLabel.text!)!
             perfCal = false
         }
         else
         {
             resLabel.text = resLabel.text! + String(sender.tag-1)
-            numOnScreen = Double(resLabel.text!)!
+            
         }
+        numOnScreen = Double(resLabel.text!)!
         print("bouton " + String(sender.tag-1))
-       
     }
     
     @IBAction func opBtn(_ sender: UIButton)
     {
         if (resLabel.text != "" && sender.tag != 11 && sender.tag != 12 && sender.tag != 17)
         {
-//            print("prev ",prevNum, " ", numOnScreen)
-            if (resul != 0)
-            {
-                prevNum = resul;
-            }
-            else
-            {
-                prevNum = numOnScreen;
-            }
+            print("pr et on", prevNum, " ", numOnScreen)
             if (sender.tag == 13) //div
             {
                 resLabel.text = "/"
+                resul = prevNum / numOnScreen
             }
             else if (sender.tag == 14) // mul
             {
                 resLabel.text = "*"
+                resul = prevNum * numOnScreen
             }
             else if (sender.tag == 15) // sous
             {
                 resLabel.text = "-"
+                resul = prevNum - numOnScreen
             }
             else if (sender.tag == 16) // add
             {
                 resLabel.text = "+"
+                resul = prevNum + numOnScreen
             }
+//            if (continu == true)
+//            {
+//                print("ca rentre")
+////                numOnScreen = resul
+//            }
             operat = sender.tag;
             perfCal = true;
+            continu = true;
+            print("rsl ", resul)
+            if (first == false)
+            {
+                prevNum = numOnScreen
+                first = true
+            }
+            else
+            {
+               prevNum = resul;
+            }
         }
         else if (resLabel.text != "" && sender.tag == 17)
         {
@@ -100,7 +119,8 @@ class ViewController: UIViewController
             print(prevNum, " ", numOnScreen)
             resul = Double(resLabel.text!)!
             prevNum = resul;
-            print(resul);
+            reset = true
+//            print(resul);
         }
         else if (resLabel.text != "" && sender.tag == 12)
         {
@@ -115,13 +135,21 @@ class ViewController: UIViewController
         }
         else if (sender.tag == 11)
         {
-            resLabel.text = "";
-            numOnScreen = 0;
-            prevNum = 0;
-            operat = 0;
-            resul = 0;
-            perfCal = false;
+            clearAll()
         }
+    }
+    
+    func clearAll()
+    {
+        resLabel.text = "";
+        numOnScreen = 0;
+        prevNum = 0;
+        operat = 0;
+        resul = 0;
+        perfCal = false;
+        reset = false;
+        continu = false;
+        first = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
