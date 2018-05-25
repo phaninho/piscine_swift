@@ -10,12 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var     numOnScreen:Double = 0;
+    
     @IBOutlet weak var resLabel: UILabel!
     
-    
     @IBAction func numBtn(_ sender: UIButton) {
-        print("bouton " + String(sender.tag-1))
+        print("boutons " + String(sender.tag-1))
         resLabel.text = resLabel.text! + String(sender.tag-1)
+        print("numOnScreen")
+        numOnScreen = Double(resLabel.text!)!
+        print("numOnScreen")
     }
     
     override func viewDidLoad() {
