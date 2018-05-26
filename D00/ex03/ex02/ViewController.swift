@@ -16,6 +16,7 @@ class ViewController: UIViewController
     var     resul:Double = 0;
     var     perfCal = false;
     var     operat = 0;
+    var     oldOperat = 0;
     var     reset = false;
     var     continu = false
     var     first = false
@@ -50,29 +51,53 @@ class ViewController: UIViewController
             print("pr et on", prevNum, " ", numOnScreen)
             if (sender.tag == 13) //div
             {
+                print("/")
                 resLabel.text = "/"
-                resul = prevNum / numOnScreen
+//                resul = prevNum / numOnScreen
             }
             else if (sender.tag == 14) // mul
             {
+                 print("*")
                 resLabel.text = "*"
-                resul = prevNum * numOnScreen
+//                resul = prevNum * numOnScreen
             }
             else if (sender.tag == 15) // sous
             {
+                 print("-")
                 resLabel.text = "-"
-                resul = prevNum - numOnScreen
+//                resul = prevNum - numOnScreen
             }
             else if (sender.tag == 16) // add
             {
+                 print("+")
                 resLabel.text = "+"
-                resul = prevNum + numOnScreen
+//                resul = prevNum + numOnScreen
             }
 //            if (continu == true)
 //            {
 //                print("ca rentre")
 ////                numOnScreen = resul
 //            }
+            if (oldOperat != 0)
+            {
+                if (oldOperat == 13)
+                {
+                    resul = prevNum / numOnScreen
+                }
+                else if (oldOperat == 14)
+                {
+                    resul = prevNum * numOnScreen
+                }
+                else if (oldOperat == 15)
+                {
+                    resul = prevNum - numOnScreen
+                }
+                else if (oldOperat == 16)
+                {
+                    resul = prevNum + numOnScreen
+                }
+            }
+            oldOperat = sender.tag;
             operat = sender.tag;
             perfCal = true;
             continu = true;
