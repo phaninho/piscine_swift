@@ -149,14 +149,15 @@ class ViewController: UIViewController
         }
         else if (resLabel.text != "" && sender.tag == 12)
         {
-            if (numOnScreen > 0)
+            if (Double(resLabel.text!)! > 0)
             {
-                resLabel.text = "-"+String(numOnScreen);
+                resLabel.text = "-" + resLabel.text!;
             }
             else
             {
-                resLabel.text = String(numOnScreen*(-1));
+                resLabel.text = String(Double(resLabel.text!)!*(-1));
             }
+            numOnScreen = Double(resLabel.text!)!
         }
         else if (sender.tag == 11)
         {
