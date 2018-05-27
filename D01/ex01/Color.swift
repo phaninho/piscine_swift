@@ -1,8 +1,8 @@
 
 enum    Color: String{
-    case Bleu = "Eau"
-    case Rouge = "Feu"
-    case Blanc = "Air"
-    case Noir = "Terre"
-    static let allColors: [Color] = [Bleu, Rouge, Blanc, Noir]
+case Spade = "pique"
+case Diamond = "carreau"
+case Heart = "coeur"
+case Club = "trefle"
+    static let allColors: [Color] = [Spade, Diamond, Heart, Club]
 }
