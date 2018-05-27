@@ -6,7 +6,6 @@ extension Array
   {
         for i in indices
         {
-            // print(i)
            let j = Int(arc4random_uniform(UInt32(self.count)))
            if (j != i)
            {
