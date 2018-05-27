@@ -51,10 +51,10 @@ class Deck: NSObject{
     func fold(c: Card)
     {
         let i = outs.index(of: c)
-            if i != nil
-            {
-                discards.append(c)
-                outs.remove(at: i!)
-            }
+        if i != nil
+        {
+            discards.append(c)
+            outs.remove(at: i!)
+        }
     }
 }
