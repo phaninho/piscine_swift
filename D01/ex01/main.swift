@@ -1,6 +1,6 @@
-var c1 = Card(col: Color.Diamond, val: Value.Neuf)
-var c3 = Card(col: Color.Diamond, val: Value.Neuf)
-var c2 = Card(col: Color.Heart, val: Value.Neuf)
+var c1 = Card(color: Color.Diamond, value: Value.Neuf)
+var c3 = Card(color: Color.Diamond, value: Value.Neuf)
+var c2 = Card(color: Color.Heart, value: Value.Neuf)
 print(c1.description)
 if c1 == c3
 {
