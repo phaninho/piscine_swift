@@ -53,31 +53,23 @@ class ViewController: UIViewController
             {
                 print("/")
                 resLabel.text = "/"
-//                resul = prevNum / numOnScreen
             }
             else if (sender.tag == 14) // mul
             {
                  print("*")
                 resLabel.text = "*"
-//                resul = prevNum * numOnScreen
             }
             else if (sender.tag == 15) // sous
             {
                  print("-")
                 resLabel.text = "-"
-//                resul = prevNum - numOnScreen
             }
             else if (sender.tag == 16) // add
             {
                  print("+")
                 resLabel.text = "+"
-//                resul = prevNum + numOnScreen
             }
-//            if (continu == true)
-//            {
-//                print("ca rentre")
-////                numOnScreen = resul
-//            }
+
             if (oldOperat != 0)
             {
                 if (oldOperat == 13)
@@ -145,7 +137,6 @@ class ViewController: UIViewController
             resul = Double(resLabel.text!)!
             prevNum = resul;
             reset = true
-//            print(resul);
         }
         else if (resLabel.text != "" && sender.tag == 12)
         {
@@ -177,16 +168,5 @@ class ViewController: UIViewController
         continu = false;
         first = false
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
