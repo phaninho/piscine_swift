@@ -40,7 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "deathCell") as? DeathTableViewCell
         cell?.death = Data.deaths[indexPath.row]
-        cell?.deathLabel?.numberOfLines = 0
         return cell!
     }
 }
