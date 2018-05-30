@@ -29,10 +29,6 @@ class SecondViewController: UIViewController {
             print(Data.deaths)
         }
     }
-   
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
     /*
     // MARK: - Navigation
 
