@@ -49,13 +49,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he0-ng-5ac">
-                                                    <rect key="frame" x="0.0" y="43" width="66" height="25"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he0-ng-5ac">
+                                                    <rect key="frame" x="0.0" y="43" width="66" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.87408405386504162" blue="0.81440639972637496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="arS-gO-lA5" secondAttribute="trailing" constant="-4" id="43B-4s-wyb"/>
                                                 <constraint firstItem="arS-gO-lA5" firstAttribute="top" secondItem="vMG-KV-dld" secondAttribute="top" id="6pf-uk-mdD"/>
@@ -116,13 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyq-NL-SbC">
-                                <rect key="frame" x="13" y="187" width="36" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q8-ce-EBO">
-                                <rect key="frame" x="16" y="282" width="136" height="21"/>
+                                <rect key="frame" x="13" y="150" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,7 +130,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-bN-nGe">
-                                <rect key="frame" x="62" y="187" width="242" height="83"/>
+                                <rect key="frame" x="62" y="150" width="242" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="ZVn-Th-qnb"/>
                                     <constraint firstAttribute="width" constant="242" id="yQt-4o-6xy"/>
@@ -145,19 +140,25 @@
                                 </date>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NvJ-GF-LUZ">
-                                <rect key="frame" x="16" y="311" width="212" height="96"/>
+                                <rect key="frame" x="16" y="270" width="212" height="96"/>
                                 <color key="backgroundColor" red="0.87637797819999996" green="0.87637797819999996" blue="0.87637797819999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q8-ce-EBO">
+                                <rect key="frame" x="16" y="241" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XLp-2p-B99" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="13" id="0dB-rY-Fhu"/>
-                            <constraint firstItem="4q8-ce-EBO" firstAttribute="top" secondItem="cyq-NL-SbC" secondAttribute="bottom" constant="74" id="1nc-Jf-z0P"/>
                             <constraint firstItem="NvJ-GF-LUZ" firstAttribute="height" secondItem="dtg-B2-nD6" secondAttribute="height" multiplier="0.2" id="2md-A4-0IM"/>
                             <constraint firstItem="BMX-pe-dO5" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="16" id="2ze-2e-VfI"/>
                             <constraint firstItem="BMX-pe-dO5" firstAttribute="top" secondItem="XLp-2p-B99" secondAttribute="bottom" constant="8" id="5cd-Et-7Vs"/>
+                            <constraint firstItem="4q8-ce-EBO" firstAttribute="top" secondItem="bF5-bN-nGe" secondAttribute="bottom" constant="8" id="9OD-ha-QNH"/>
                             <constraint firstItem="NvJ-GF-LUZ" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="16" id="JPB-JV-BZS"/>
                             <constraint firstItem="bF5-bN-nGe" firstAttribute="top" secondItem="cyq-NL-SbC" secondAttribute="top" id="Kjn-0f-pqH"/>
                             <constraint firstItem="XLp-2p-B99" firstAttribute="top" secondItem="ZC7-nD-kYS" secondAttribute="top" constant="19" id="Pse-b1-4gN"/>
@@ -165,7 +166,9 @@
                             <constraint firstItem="ZC7-nD-kYS" firstAttribute="trailing" secondItem="NvJ-GF-LUZ" secondAttribute="trailing" constant="92" id="V3i-HT-l4S"/>
                             <constraint firstItem="4q8-ce-EBO" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="16" id="VOc-w9-F84"/>
                             <constraint firstItem="bF5-bN-nGe" firstAttribute="trailing" secondItem="BMX-pe-dO5" secondAttribute="trailing" id="cJd-Ym-CPI"/>
-                            <constraint firstItem="cyq-NL-SbC" firstAttribute="top" secondItem="BMX-pe-dO5" secondAttribute="bottom" constant="45" id="ezB-uc-hau"/>
+                            <constraint firstItem="cyq-NL-SbC" firstAttribute="top" secondItem="BMX-pe-dO5" secondAttribute="bottom" constant="8" id="e8j-Ho-LsC"/>
+                            <constraint firstItem="bF5-bN-nGe" firstAttribute="leading" secondItem="cyq-NL-SbC" secondAttribute="trailing" constant="13" id="fee-O7-xKd"/>
+                            <constraint firstItem="bF5-bN-nGe" firstAttribute="top" secondItem="BMX-pe-dO5" secondAttribute="bottom" constant="8" id="jwO-rQ-jl7"/>
                             <constraint firstItem="NvJ-GF-LUZ" firstAttribute="top" secondItem="4q8-ce-EBO" secondAttribute="bottom" constant="8" id="mfo-Gc-QWM"/>
                             <constraint firstItem="ZC7-nD-kYS" firstAttribute="trailing" secondItem="BMX-pe-dO5" secondAttribute="trailing" constant="16" id="oSh-DF-FBZ"/>
                         </constraints>
@@ -186,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oa9-gK-8br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="-12.143928035982009"/>
+            <point key="canvasLocation" x="1575" y="-13"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sdR-M1-39G">
