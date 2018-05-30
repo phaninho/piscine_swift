@@ -23,10 +23,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ViewController
-        {
-            vc.title = "Add Death Note"
-        }
+//        if let vc = segue.destination as? ViewController
+//        {
+////            vc.title = "Add Death Note"
+//        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

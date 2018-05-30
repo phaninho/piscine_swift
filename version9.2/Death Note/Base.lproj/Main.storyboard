@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +31,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arS-gO-lA5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arS-gO-lA5">
                                                     <rect key="frame" x="137" y="0.0" width="227" height="111"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="227" id="0bj-ek-epP"/>
@@ -88,7 +89,7 @@
                     <navigationItem key="navigationItem" title="Death Note" id="Hia-QV-9y1">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="j3z-Kv-h71">
                             <connections>
-                                <segue destination="kZB-zk-Hbp" kind="show" identifier="addDeathSegue" id="zGb-ks-pkh"/>
+                                <segue destination="ptx-lI-N5F" kind="show" id="KVE-H4-2S1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -98,83 +99,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+            <point key="canvasLocation" x="556" y="-12"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="udi-GU-x5b">
+        <!--Add Death Note-->
+        <scene sceneID="Coe-Na-m46">
             <objects>
-                <viewController id="kZB-zk-Hbp" customClass="SecondViewController" customModule="Death_Note" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uKx-o3-Q4m">
+                <viewController id="ptx-lI-N5F" customClass="SecondViewController" customModule="Death_Note" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtg-B2-nD6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Death Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWu-QP-96U">
-                                <rect key="frame" x="16" y="115" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-2p-B99">
+                                <rect key="frame" x="13" y="83" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Death Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xy-kT-AzE">
-                                <rect key="frame" x="16" y="183" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyq-NL-SbC">
+                                <rect key="frame" x="13" y="187" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Death Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtA-LO-qQS">
-                                <rect key="frame" x="16" y="282" width="155" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q8-ce-EBO">
+                                <rect key="frame" x="16" y="282" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jn-ae-ABp">
-                                <rect key="frame" x="16" y="318" width="343" height="291"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BMX-pe-dO5">
+                                <rect key="frame" x="16" y="112" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.87637797819999996" green="0.87637797819999996" blue="0.87637797819999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khw-lf-Xvz">
-                                <rect key="frame" x="164" y="617" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="doneBtn:" destination="kZB-zk-Hbp" eventType="touchUpInside" id="Ju2-CJ-cC6"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKC-86-vze">
-                                <rect key="frame" x="120" y="110" width="239" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QGw-mm-yfJ">
-                                <rect key="frame" x="69" y="212" width="290" height="67"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="549304101.22792602">
-                                    <!--2018-05-29 16:28:21 +0000-->
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-bN-nGe">
+                                <rect key="frame" x="117" y="187" width="242" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="ZVn-Th-qnb"/>
+                                    <constraint firstAttribute="width" constant="242" id="yQt-4o-6xy"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="549358447.10699499">
+                                    <!--2018-05-30 07:34:07 +0000-->
                                 </date>
                             </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NvJ-GF-LUZ">
+                                <rect key="frame" x="16" y="311" width="267" height="133.5"/>
+                                <color key="backgroundColor" red="0.87637797819999996" green="0.87637797819999996" blue="0.87637797819999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="P3K-ym-ecu"/>
+                        <constraints>
+                            <constraint firstItem="XLp-2p-B99" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="13" id="0dB-rY-Fhu"/>
+                            <constraint firstItem="NvJ-GF-LUZ" firstAttribute="height" secondItem="dtg-B2-nD6" secondAttribute="height" multiplier="0.2" id="2md-A4-0IM"/>
+                            <constraint firstItem="BMX-pe-dO5" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="16" id="2ze-2e-VfI"/>
+                            <constraint firstItem="BMX-pe-dO5" firstAttribute="top" secondItem="XLp-2p-B99" secondAttribute="bottom" constant="8" id="5cd-Et-7Vs"/>
+                            <constraint firstItem="NvJ-GF-LUZ" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="16" id="JPB-JV-BZS"/>
+                            <constraint firstItem="bF5-bN-nGe" firstAttribute="top" secondItem="cyq-NL-SbC" secondAttribute="top" id="Kjn-0f-pqH"/>
+                            <constraint firstItem="XLp-2p-B99" firstAttribute="top" secondItem="ZC7-nD-kYS" secondAttribute="top" constant="19" id="Pse-b1-4gN"/>
+                            <constraint firstItem="cyq-NL-SbC" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="13" id="TE9-TS-gfh"/>
+                            <constraint firstItem="ZC7-nD-kYS" firstAttribute="trailing" secondItem="NvJ-GF-LUZ" secondAttribute="trailing" constant="92" id="V3i-HT-l4S"/>
+                            <constraint firstItem="4q8-ce-EBO" firstAttribute="leading" secondItem="ZC7-nD-kYS" secondAttribute="leading" constant="16" id="VOc-w9-F84"/>
+                            <constraint firstItem="bF5-bN-nGe" firstAttribute="trailing" secondItem="BMX-pe-dO5" secondAttribute="trailing" id="cJd-Ym-CPI"/>
+                            <constraint firstItem="cyq-NL-SbC" firstAttribute="top" secondItem="BMX-pe-dO5" secondAttribute="bottom" constant="45" id="ezB-uc-hau"/>
+                            <constraint firstItem="4q8-ce-EBO" firstAttribute="top" secondItem="cyq-NL-SbC" secondAttribute="bottom" constant="74" id="fxb-5r-3Ud"/>
+                            <constraint firstItem="NvJ-GF-LUZ" firstAttribute="top" secondItem="4q8-ce-EBO" secondAttribute="bottom" constant="8" id="mfo-Gc-QWM"/>
+                            <constraint firstItem="ZC7-nD-kYS" firstAttribute="trailing" secondItem="BMX-pe-dO5" secondAttribute="trailing" constant="16" id="oSh-DF-FBZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZC7-nD-kYS"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Death Note" id="7li-4l-uGs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TQz-L7-ZqO">
+                            <connections>
+                                <action selector="DoneBtn:" destination="ptx-lI-N5F" id="hl6-L5-Bp9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="datePickField" destination="QGw-mm-yfJ" id="1Nb-2Y-SeA"/>
-                        <outlet property="deathDescriptionField" destination="9jn-ae-ABp" id="BUk-dK-xF8"/>
-                        <outlet property="nameTextField" destination="PKC-86-vze" id="luW-HJ-OoL"/>
+                        <outlet property="datePickField" destination="bF5-bN-nGe" id="4iu-ml-vXN"/>
+                        <outlet property="deathDescriptionField" destination="NvJ-GF-LUZ" id="nAZ-U3-ZUP"/>
+                        <outlet property="nameTextField" destination="BMX-pe-dO5" id="ltc-ri-4OP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WLV-1D-aRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oa9-gK-8br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253.5999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1312.8" y="-12.143928035982009"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sdR-M1-39G">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbb-1F-V6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8WZ-E7-lbN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DFp-io-Ac5">
@@ -186,7 +203,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mSn-y0-tZp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wbb-1F-V6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-370" y="118"/>
         </scene>

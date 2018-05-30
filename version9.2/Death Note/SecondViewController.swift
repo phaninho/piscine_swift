@@ -15,24 +15,24 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var datePickField: UIDatePicker!
     
-    @IBOutlet weak var deathDescriptionField: UITextField!
+    @IBOutlet weak var deathDescriptionField: UITextView!
     
-    @IBAction func doneBtn(_ sender: Any) {
+    @IBAction func DoneBtn(_ sender: Any) {
         if nameTextField.text != "" && deathDescriptionField.text != ""
         {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd-MM-yyyy"
-//            dateTxt.text = dateFormatter.string(from: datePickField.date)
-//            self.view.endEditing(true)
+            //            dateTxt.text = dateFormatter.string(from: datePickField.date)
+            //            self.view.endEditing(true)
             print(Data.deaths.count)
             Data.deaths += [(nameTextField.text!, deathDescriptionField.text!, dateFormatter.string(from: datePickField.date))]
-             print(Data.deaths)
+            print(Data.deaths)
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Add Death Note"
-    }
+   
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
     /*
     // MARK: - Navigation
 
