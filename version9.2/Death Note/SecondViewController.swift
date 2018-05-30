@@ -17,16 +17,18 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var deathDescriptionField: UITextView!
     
-    @IBAction func DoneBtn(_ sender: Any) {
-        if nameTextField.text != "" && deathDescriptionField.text != ""
+    @IBAction func DoneBtn(_ sender: Any) {}
+    
+    
+    var newNote: (String, String, String) = ("", "", "")
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if nameTextField.text != ""
         {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd-MM-yyyy"
-            //            dateTxt.text = dateFormatter.string(from: datePickField.date)
-            //            self.view.endEditing(true)
-            print(Data.deaths.count)
-            Data.deaths += [(nameTextField.text!, deathDescriptionField.text!, dateFormatter.string(from: datePickField.date))]
-            print(Data.deaths)
+            newNote = (nameTextField.text!, deathDescriptionField.text!, dateFormatter.string(from: datePickField.date))
         }
     }
     /*

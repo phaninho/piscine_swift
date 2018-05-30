@@ -11,24 +11,28 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
-    @IBOutlet weak var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-
-        // tableView.estimatedRowHeight = 42
-        // tableView.rowHeight = UITableViewAutomaticDimension
+    @IBAction func unWindFromAddVC(_ sender:UIStoryboardSegue)
+    {
+        if sender.source is SecondViewController
+        {
+            if let senderVC = sender.source as? SecondViewController
+            {
+                Data.deaths.append(senderVC.newNote)
+            }
+            print(Data.deaths)
+            tableView.reloadData()
+        }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? ViewController
-//        {
-////            vc.title = "Add Death Note"
-//        }
+    @IBOutlet weak var tableView: UITableView!
+    {
+        didSet
+        {
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+        }
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.deaths.count
     }

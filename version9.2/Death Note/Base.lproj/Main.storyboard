@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="izK-VW-3CY">
-                                <rect key="frame" x="0.0" y="32" width="320" height="480"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="izK-VW-3CY">
+                                <rect key="frame" x="0.0" y="41" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deathCell" rowHeight="111" id="OFd-jd-aCT" customClass="DeathTableViewCell" customModule="Death_Note">
@@ -32,42 +31,44 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arS-gO-lA5">
-                                                    <rect key="frame" x="82" y="0.0" width="227" height="111"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="227" id="0bj-ek-epP"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="28.5" width="320" height="66.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z7-J0-iwp">
-                                                    <rect key="frame" x="0.0" y="11" width="39" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="kpE-GE-Aeb"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he0-ng-5ac">
-                                                    <rect key="frame" x="0.0" y="43" width="66" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-eN-qoI">
+                                                    <rect key="frame" x="0.0" y="11" width="320" height="17.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z7-J0-iwp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="287.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he0-ng-5ac">
+                                                            <rect key="frame" x="287.5" y="0.0" width="32.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.87408405386504162" blue="0.81440639972637496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="arS-gO-lA5" secondAttribute="trailing" constant="-4" id="43B-4s-wyb"/>
-                                                <constraint firstItem="arS-gO-lA5" firstAttribute="top" secondItem="vMG-KV-dld" secondAttribute="top" id="6pf-uk-mdD"/>
-                                                <constraint firstItem="arS-gO-lA5" firstAttribute="leading" secondItem="he0-ng-5ac" secondAttribute="trailing" constant="16" id="86N-Gj-Gsq"/>
-                                                <constraint firstItem="6z7-J0-iwp" firstAttribute="top" secondItem="vMG-KV-dld" secondAttribute="topMargin" id="BaD-LU-sMi"/>
-                                                <constraint firstItem="arS-gO-lA5" firstAttribute="centerY" secondItem="vMG-KV-dld" secondAttribute="centerY" id="Fe4-Yu-jW5"/>
-                                                <constraint firstItem="he0-ng-5ac" firstAttribute="leading" secondItem="vMG-KV-dld" secondAttribute="leading" id="Uwf-Oe-C3P"/>
-                                                <constraint firstItem="6z7-J0-iwp" firstAttribute="leading" secondItem="vMG-KV-dld" secondAttribute="leading" id="gPt-yv-nYo"/>
-                                                <constraint firstItem="he0-ng-5ac" firstAttribute="top" secondItem="6z7-J0-iwp" secondAttribute="bottom" constant="11" id="jyD-35-ex4"/>
+                                                <constraint firstItem="arS-gO-lA5" firstAttribute="height" secondItem="vMG-KV-dld" secondAttribute="height" multiplier="0.6" id="PSI-iC-lRr"/>
+                                                <constraint firstItem="6z7-J0-iwp" firstAttribute="height" secondItem="vMG-KV-dld" secondAttribute="height" multiplier="0.16" id="sCe-qX-8aZ"/>
+                                                <constraint firstItem="arS-gO-lA5" firstAttribute="top" secondItem="v4o-eN-qoI" secondAttribute="bottom" id="vcg-lv-Riq"/>
+                                                <constraint firstItem="arS-gO-lA5" firstAttribute="top" secondItem="6z7-J0-iwp" secondAttribute="bottom" id="z0P-Zw-ulW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="v4o-eN-qoI" firstAttribute="leading" secondItem="OFd-jd-aCT" secondAttribute="leading" id="BPA-lP-JWY"/>
+                                            <constraint firstAttribute="trailing" secondItem="arS-gO-lA5" secondAttribute="trailing" id="LHS-Lo-1T7"/>
+                                            <constraint firstItem="v4o-eN-qoI" firstAttribute="top" secondItem="OFd-jd-aCT" secondAttribute="top" constant="11" id="QvI-kR-NQA"/>
+                                            <constraint firstItem="arS-gO-lA5" firstAttribute="leading" secondItem="OFd-jd-aCT" secondAttribute="leading" id="VRH-fI-tKV"/>
+                                            <constraint firstAttribute="trailing" secondItem="v4o-eN-qoI" secondAttribute="trailing" id="zVR-6O-ef3"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="he0-ng-5ac" id="vZG-1Q-SUP"/>
                                             <outlet property="deathLabel" destination="arS-gO-lA5" id="qYC-E6-ipa"/>
@@ -90,7 +91,7 @@
                     <navigationItem key="navigationItem" title="Death Note" id="Hia-QV-9y1">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="j3z-Kv-h71">
                             <connections>
-                                <segue destination="ptx-lI-N5F" kind="show" id="KVE-H4-2S1"/>
+                                <segue destination="ptx-lI-N5F" kind="show" identifier="addNoteSegue" id="KVE-H4-2S1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="-12.5"/>
+            <point key="canvasLocation" x="303.75" y="-125"/>
         </scene>
         <!--Add Death Note-->
         <scene sceneID="Coe-Na-m46">
@@ -178,6 +179,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="TQz-L7-ZqO">
                             <connections>
                                 <action selector="DoneBtn:" destination="ptx-lI-N5F" id="hl6-L5-Bp9"/>
+                                <segue destination="OCh-Ql-Isc" kind="unwind" unwindAction="unWindFromAddVC:" id="hfe-9v-1cl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -188,8 +190,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oa9-gK-8br" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OCh-Ql-Isc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-13"/>
+            <point key="canvasLocation" x="1011" y="-4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sdR-M1-39G">
@@ -207,7 +210,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-370" y="118"/>
+            <point key="canvasLocation" x="-392" y="-24"/>
         </scene>
     </scenes>
 </document>
