@@ -78,6 +78,7 @@
                     <navigationItem key="navigationItem" title="Death Note" id="Hia-QV-9y1">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="j3z-Kv-h71">
                             <connections>
+                                <action selector="addBtn:" destination="BYZ-38-t0r" id="6kt-3T-uUQ"/>
                                 <segue destination="kZB-zk-Hbp" kind="show" identifier="addDeathSegue" id="zGb-ks-pkh"/>
                             </connections>
                         </barButtonItem>
@@ -152,6 +153,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="P3K-ym-ecu"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePickField" destination="QGw-mm-yfJ" id="1Nb-2Y-SeA"/>
                         <outlet property="deathDescriptionField" destination="9jn-ae-ABp" id="BUk-dK-xF8"/>

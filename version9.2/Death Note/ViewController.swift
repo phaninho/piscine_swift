@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBAction func addBtn(_ sender: UIBarButtonItem) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -22,12 +24,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ViewController
-        {
-            vc.title = "Add Death Note"
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? ViewController
+//        {
+//            vc.title = "Add Death Note"
+//        }
+//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.deaths.count
