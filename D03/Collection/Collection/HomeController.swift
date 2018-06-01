@@ -26,13 +26,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             image.url = url
             self.images?.append(image)
         }
-        queue.async {
-            DispatchQueue.main.async
-                {
-                    self.collectionView?.reloadData()
-            }
+        DispatchQueue.main.async
+            {
+                self.collectionView?.reloadData()
         }
-        
     }
     
     override func viewDidLoad() {
