@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F41847DA20C07E250043AFC3 /* ImgAddrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41847D920C07E250043AFC3 /* ImgAddrModel.swift */; };
+		F41847DC20C0EA580043AFC3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41847DB20C0EA570043AFC3 /* Image.swift */; };
+		F41847DE20C0FB310043AFC3 /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41847DD20C0FB310043AFC3 /* imageCell.swift */; };
+		F41847E020C149890043AFC3 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41847DF20C149890043AFC3 /* extension.swift */; };
 		F4C647BA20C043C00032EA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C647B920C043C00032EA08 /* AppDelegate.swift */; };
-		F4C647BC20C043C10032EA08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C647BB20C043C10032EA08 /* ViewController.swift */; };
+		F4C647BC20C043C10032EA08 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C647BB20C043C10032EA08 /* HomeController.swift */; };
 		F4C647BF20C043C10032EA08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C647BD20C043C10032EA08 /* Main.storyboard */; };
 		F4C647C120C043C10032EA08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C647C020C043C10032EA08 /* Assets.xcassets */; };
 		F4C647C420C043C10032EA08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C647C220C043C10032EA08 /* LaunchScreen.storyboard */; };
@@ -17,9 +20,12 @@
 
 /* Begin PBXFileReference section */
 		F41847D920C07E250043AFC3 /* ImgAddrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgAddrModel.swift; sourceTree = "<group>"; };
+		F41847DB20C0EA570043AFC3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F41847DD20C0FB310043AFC3 /* imageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
+		F41847DF20C149890043AFC3 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		F4C647B620C043C00032EA08 /* Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C647B920C043C00032EA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4C647BB20C043C10032EA08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4C647BB20C043C10032EA08 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		F4C647BE20C043C10032EA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4C647C020C043C10032EA08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4C647C320C043C10032EA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				F4C647B920C043C00032EA08 /* AppDelegate.swift */,
-				F4C647BB20C043C10032EA08 /* ViewController.swift */,
+				F4C647BB20C043C10032EA08 /* HomeController.swift */,
+				F41847DF20C149890043AFC3 /* extension.swift */,
 				F41847D920C07E250043AFC3 /* ImgAddrModel.swift */,
+				F41847DD20C0FB310043AFC3 /* imageCell.swift */,
+				F41847DB20C0EA570043AFC3 /* Image.swift */,
 				F4C647BD20C043C10032EA08 /* Main.storyboard */,
 				F4C647C020C043C10032EA08 /* Assets.xcassets */,
 				F4C647C220C043C10032EA08 /* LaunchScreen.storyboard */,
@@ -140,7 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41847DA20C07E250043AFC3 /* ImgAddrModel.swift in Sources */,
-				F4C647BC20C043C10032EA08 /* ViewController.swift in Sources */,
+				F41847DC20C0EA580043AFC3 /* Image.swift in Sources */,
+				F41847DE20C0FB310043AFC3 /* imageCell.swift in Sources */,
+				F41847E020C149890043AFC3 /* extension.swift in Sources */,
+				F4C647BC20C043C10032EA08 /* HomeController.swift in Sources */,
 				F4C647BA20C043C00032EA08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
