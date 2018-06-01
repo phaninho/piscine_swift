@@ -2,8 +2,9 @@ import Foundation
 
 struct Data {
     static var deaths : [(String, String, String)] = [
-        ("Franck X", "Franck est dans ca voiture au Feu rouge.\nUne vache larguée par un petit avion en difficulté, \nobligé de l'arguer leur buttin pour alleger l'ensemble,\nviens s'ecraser de pleins fouet sur le toit du vehicule \nde Franck qui meurt sur le coup", "29.06.2012"),
-        ("Francis Z", "Au cirque, quand viendra le tour des\nfelins, 3 d'entre eux vont s'echapper\npour s'attaquer a Francis et lui infliger\nla morsure qui lui sera fatale", "25.11.2012"),
-        ("Charles J", "poussé sur les rails du metro par un\ninconnu qui ne sera jamais retourvé\nni meme jamais inquieté d'une\nquelconque poursuite", "19.01.2011")
+        ("Johnny Haliday", "a oublié de vivre", "05-12-2017"),
+        ("Stanley Kubrick", "Atterrissage raté sur la lune", "07-03-1999"),
+        ("Jim Morrison", "It was the end", "03-07-1971"),
+        ("W.A Mozart", "Manque de volontaire pour tester son dernier requiem", "05-12-1791")
     ]
 }

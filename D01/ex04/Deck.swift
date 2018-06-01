@@ -43,9 +43,16 @@ class Deck: NSObject{
     }
 
     func draw() -> Card? {
-        outs.append(self.cards[0])
-        cards.remove(at:0)
-        return self.outs.last
+        if (self.cards.count > 0)
+        {
+            outs.append(self.cards[0])
+            cards.remove(at:0)
+            return self.outs.last
+        }
+        else
+        {
+            return nil
+        }
     }
 
     func fold(c: Card)

@@ -3,33 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F438A2BF20BBADC00004F5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438A2BE20BBADC00004F5FF /* AppDelegate.swift */; };
-		F438A2C120BBADC00004F5FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438A2C020BBADC00004F5FF /* ViewController.swift */; };
-		F438A2C420BBADC00004F5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F438A2C220BBADC00004F5FF /* Main.storyboard */; };
-		F438A2C620BBADC00004F5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F438A2C520BBADC00004F5FF /* Assets.xcassets */; };
-		F438A2C920BBADC00004F5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F438A2C720BBADC00004F5FF /* LaunchScreen.storyboard */; };
-		F438A2D120BBAFA30004F5FF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438A2D020BBAFA30004F5FF /* Model.swift */; };
-		F438A2D320BBB4B40004F5FF /* DeathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438A2D220BBB4B40004F5FF /* DeathTableViewCell.swift */; };
+		1D89109020BF0D8F00F7D424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89108F20BF0D8F00F7D424 /* AppDelegate.swift */; };
+		1D89109220BF0D8F00F7D424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89109120BF0D8F00F7D424 /* ViewController.swift */; };
+		1D89109520BF0D8F00F7D424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D89109320BF0D8F00F7D424 /* Main.storyboard */; };
+		1D89109720BF0D8F00F7D424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D89109620BF0D8F00F7D424 /* Assets.xcassets */; };
+		1D89109A20BF0D8F00F7D424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D89109820BF0D8F00F7D424 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F438A2BB20BBADC00004F5FF /* Death Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F438A2BE20BBADC00004F5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F438A2C020BBADC00004F5FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F438A2C320BBADC00004F5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F438A2C520BBADC00004F5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F438A2C820BBADC00004F5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F438A2CA20BBADC00004F5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F438A2D020BBAFA30004F5FF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		F438A2D220BBB4B40004F5FF /* DeathTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathTableViewCell.swift; sourceTree = "<group>"; };
+		1D89108C20BF0D8F00F7D424 /* photoCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D89108F20BF0D8F00F7D424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D89109120BF0D8F00F7D424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D89109420BF0D8F00F7D424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D89109620BF0D8F00F7D424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D89109920BF0D8F00F7D424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D89109B20BF0D8F00F7D424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F438A2B820BBADC00004F5FF /* Frameworks */ = {
+		1D89108920BF0D8F00F7D424 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,130 +35,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F438A2B220BBADC00004F5FF = {
+		1D89108320BF0D8F00F7D424 = {
 			isa = PBXGroup;
 			children = (
-				F438A2BD20BBADC00004F5FF /* Death Notes */,
-				F438A2BC20BBADC00004F5FF /* Products */,
+				1D89108E20BF0D8F00F7D424 /* photoCollection */,
+				1D89108D20BF0D8F00F7D424 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F438A2BC20BBADC00004F5FF /* Products */ = {
+		1D89108D20BF0D8F00F7D424 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F438A2BB20BBADC00004F5FF /* Death Notes.app */,
+				1D89108C20BF0D8F00F7D424 /* photoCollection.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F438A2BD20BBADC00004F5FF /* Death Notes */ = {
+		1D89108E20BF0D8F00F7D424 /* photoCollection */ = {
 			isa = PBXGroup;
 			children = (
-				F438A2BE20BBADC00004F5FF /* AppDelegate.swift */,
-				F438A2D220BBB4B40004F5FF /* DeathTableViewCell.swift */,
-				F438A2C020BBADC00004F5FF /* ViewController.swift */,
-				F438A2D020BBAFA30004F5FF /* Model.swift */,
-				F438A2C220BBADC00004F5FF /* Main.storyboard */,
-				F438A2C520BBADC00004F5FF /* Assets.xcassets */,
-				F438A2C720BBADC00004F5FF /* LaunchScreen.storyboard */,
-				F438A2CA20BBADC00004F5FF /* Info.plist */,
+				1D89108F20BF0D8F00F7D424 /* AppDelegate.swift */,
+				1D89109120BF0D8F00F7D424 /* ViewController.swift */,
+				1D89109320BF0D8F00F7D424 /* Main.storyboard */,
+				1D89109620BF0D8F00F7D424 /* Assets.xcassets */,
+				1D89109820BF0D8F00F7D424 /* LaunchScreen.storyboard */,
+				1D89109B20BF0D8F00F7D424 /* Info.plist */,
 			);
-			path = "Death Notes";
+			path = photoCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F438A2BA20BBADC00004F5FF /* Death Notes */ = {
+		1D89108B20BF0D8F00F7D424 /* photoCollection */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F438A2CD20BBADC00004F5FF /* Build configuration list for PBXNativeTarget "Death Notes" */;
+			buildConfigurationList = 1D89109E20BF0D8F00F7D424 /* Build configuration list for PBXNativeTarget "photoCollection" */;
 			buildPhases = (
-				F438A2B720BBADC00004F5FF /* Sources */,
-				F438A2B820BBADC00004F5FF /* Frameworks */,
-				F438A2B920BBADC00004F5FF /* Resources */,
+				1D89108820BF0D8F00F7D424 /* Sources */,
+				1D89108920BF0D8F00F7D424 /* Frameworks */,
+				1D89108A20BF0D8F00F7D424 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Death Notes";
-			productName = "Death Notes";
-			productReference = F438A2BB20BBADC00004F5FF /* Death Notes.app */;
+			name = photoCollection;
+			productName = photoCollection;
+			productReference = 1D89108C20BF0D8F00F7D424 /* photoCollection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F438A2B320BBADC00004F5FF /* Project object */ = {
+		1D89108420BF0D8F00F7D424 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "stephane martins";
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Stephane MARTINS";
 				TargetAttributes = {
-					F438A2BA20BBADC00004F5FF = {
-						CreatedOnToolsVersion = 9.3.1;
+					1D89108B20BF0D8F00F7D424 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F438A2B620BBADC00004F5FF /* Build configuration list for PBXProject "Death Notes" */;
-			compatibilityVersion = "Xcode 9.2";
+			buildConfigurationList = 1D89108720BF0D8F00F7D424 /* Build configuration list for PBXProject "photoCollection" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = F438A2B220BBADC00004F5FF;
-			productRefGroup = F438A2BC20BBADC00004F5FF /* Products */;
+			mainGroup = 1D89108320BF0D8F00F7D424;
+			productRefGroup = 1D89108D20BF0D8F00F7D424 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F438A2BA20BBADC00004F5FF /* Death Notes */,
+				1D89108B20BF0D8F00F7D424 /* photoCollection */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F438A2B920BBADC00004F5FF /* Resources */ = {
+		1D89108A20BF0D8F00F7D424 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F438A2C920BBADC00004F5FF /* LaunchScreen.storyboard in Resources */,
-				F438A2C620BBADC00004F5FF /* Assets.xcassets in Resources */,
-				F438A2C420BBADC00004F5FF /* Main.storyboard in Resources */,
+				1D89109A20BF0D8F00F7D424 /* LaunchScreen.storyboard in Resources */,
+				1D89109720BF0D8F00F7D424 /* Assets.xcassets in Resources */,
+				1D89109520BF0D8F00F7D424 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F438A2B720BBADC00004F5FF /* Sources */ = {
+		1D89108820BF0D8F00F7D424 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F438A2D320BBB4B40004F5FF /* DeathTableViewCell.swift in Sources */,
-				F438A2D120BBAFA30004F5FF /* Model.swift in Sources */,
-				F438A2C120BBADC00004F5FF /* ViewController.swift in Sources */,
-				F438A2BF20BBADC00004F5FF /* AppDelegate.swift in Sources */,
+				1D89109220BF0D8F00F7D424 /* ViewController.swift in Sources */,
+				1D89109020BF0D8F00F7D424 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F438A2C220BBADC00004F5FF /* Main.storyboard */ = {
+		1D89109320BF0D8F00F7D424 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F438A2C320BBADC00004F5FF /* Base */,
+				1D89109420BF0D8F00F7D424 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F438A2C720BBADC00004F5FF /* LaunchScreen.storyboard */ = {
+		1D89109820BF0D8F00F7D424 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F438A2C820BBADC00004F5FF /* Base */,
+				1D89109920BF0D8F00F7D424 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F438A2CB20BBADC00004F5FF /* Debug */ = {
+		1D89109C20BF0D8F00F7D424 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -180,12 +173,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -193,7 +184,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -221,7 +211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -230,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		F438A2CC20BBADC00004F5FF /* Release */ = {
+		1D89109D20BF0D8F00F7D424 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,12 +230,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -253,7 +241,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -275,43 +262,36 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F438A2CE20BBADC00004F5FF /* Debug */ = {
+		1D89109F20BF0D8F00F7D424 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Death Notes/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "piscine-swift.Death-Notes";
+				INFOPLIST_FILE = photoCollection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piscineSwift.photoCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F438A2CF20BBADC00004F5FF /* Release */ = {
+		1D8910A020BF0D8F00F7D424 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Death Notes/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "piscine-swift.Death-Notes";
+				INFOPLIST_FILE = photoCollection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piscineSwift.photoCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,25 +301,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F438A2B620BBADC00004F5FF /* Build configuration list for PBXProject "Death Notes" */ = {
+		1D89108720BF0D8F00F7D424 /* Build configuration list for PBXProject "photoCollection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F438A2CB20BBADC00004F5FF /* Debug */,
-				F438A2CC20BBADC00004F5FF /* Release */,
+				1D89109C20BF0D8F00F7D424 /* Debug */,
+				1D89109D20BF0D8F00F7D424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F438A2CD20BBADC00004F5FF /* Build configuration list for PBXNativeTarget "Death Notes" */ = {
+		1D89109E20BF0D8F00F7D424 /* Build configuration list for PBXNativeTarget "photoCollection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F438A2CE20BBADC00004F5FF /* Debug */,
-				F438A2CF20BBADC00004F5FF /* Release */,
+				1D89109F20BF0D8F00F7D424 /* Debug */,
+				1D8910A020BF0D8F00F7D424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F438A2B320BBADC00004F5FF /* Project object */;
+	rootObject = 1D89108420BF0D8F00F7D424 /* Project object */;
 }
