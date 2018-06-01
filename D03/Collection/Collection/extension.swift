@@ -10,19 +10,21 @@ import UIKit
 
 let imageCache = NSCache<NSString, AnyObject>()
 
-extension UIImageView{
+class customImageView: UIImageView{
+    
+    var imageUrlString: String?
+    
     func loadImageWithURL(urlString: String)
     {
+        imageUrlString = urlString
         let url = URL(string: urlString)
         
         image = nil
-        
         if let imageFromCache = imageCache.object(forKey: urlString as NSString) as? UIImage
         {
             self.image = imageFromCache
             return
         }
-        
         
         URLSession.shared.dataTask(with: url!, completionHandler: {(data,reponse,error) in
             if error != nil
@@ -35,7 +37,10 @@ extension UIImageView{
                     let imageToCache = UIImage(data: data!)
                     
                     imageCache.setObject(imageToCache!, forKey: urlString as NSString)
-                    self.image = imageToCache
+                    if self.imageUrlString == urlString
+                    {
+                        self.image = imageToCache
+                    }
             }
         }).resume()
     }

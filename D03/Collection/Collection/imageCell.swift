@@ -32,14 +32,14 @@ class imageCell: UICollectionViewCell
         }
     }
     
-    let thumbnailImageView: UIImageView =
+    let thumbnailImageView: customImageView =
     {
-        let imageView = UIImageView()
+        let imageView = customImageView()
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
-            var img = UIImage()
-            imageView.image = img
+            var img = customImageView()
+            imageView.image = UIImage()
         return imageView
     }()
     
