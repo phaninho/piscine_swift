@@ -36,40 +36,57 @@ final class PlaceAnnotation: NSObject, MKAnnotation
    
 }
 
-
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var MapView: MKMapView!
     
     let LocationManger = CLLocationManager()
     
-    
+    var centerMapButton: MKUserTrackingButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         MapView.register(MKMarkerAnnotationView.self,
                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        self.centerMapButton = MKUserTrackingButton.init(mapView: self.MapView)
+        setupUserTrackingButtonAndScaleView()
 //        let ftcoordinate = CLLocationCoordinate2DMake(48.896632, 2.318638)
 //        let ftannotation = PlaceAnnotation(coordinate: ftcoordinate, title: "42", subtitle: "42 est l'ensemble de trois établissements privés d’autoformation en informatique situés pour l'un en France, un en Belgique et pour l'autre aux États-Unis.")
         
 //        MapView.addAnnotation(ftannotation)
 //        MapView.setRegion(ftannotation.region, animated: true)
-        
-        LocationManger.delegate = self
-        LocationManger.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        LocationManger.requestAlwaysAuthorization()
-        LocationManger.distanceFilter = 10
-        LocationManger.startUpdatingLocation()
-        
 
-//
 //        let latitude:Double = 48.896632
 //        let longitude:Double = 2.318638
 //
 //        let locationcoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
 
 //        self.MapView.setRegion(region, animated: true)
+    }
+    
+    
+    func setupUserTrackingButtonAndScaleView() {
+        MapView.showsUserLocation = true
+        print("BINGooooooooooooooooooo")
+        let button = MKUserTrackingButton(mapView: MapView)
+        button.layer.backgroundColor = UIColor(white: 1, alpha: 0.8).cgColor
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 5
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
+        
+        let scale = MKScaleView(mapView: MapView)
+        scale.legendAlignment = .trailing
+        scale.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scale)
+        
+        NSLayoutConstraint.activate([button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+                                     button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+                                     scale.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -10),
+                                     scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)])
     }
 
    
