@@ -8,18 +8,58 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+protocol AddMapDataDelegate: class {
+    func addMapData(content: Mapbox)
+}
 
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    weak var delegate: AddMapDataDelegate?
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    var placeAnnotations: [PlaceAnnotation]?
+    
+    @IBOutlet weak var SecondTableView: UITableView!
+    {
+        didSet
+        {
+            self.SecondTableView.delegate = self
+            self.SecondTableView.dataSource = self
+
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchAnnotations()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func fetchAnnotations()
+    {
+        self.placeAnnotations = [PlaceAnnotation]()
+        for place in MapData.places
+        {
+            let placeAnnotaion = PlaceAnnotation(title: place.0, subtitle: place.1, latitude: place.2, longitude: place.3)
+            print("ouai ouai")
+            self.placeAnnotations?.append(placeAnnotaion)
+        }
+        DispatchQueue.main.async
+            {
+                self.tableView?.reloadData()
+        }
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MapData.places.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placesCell") as? PlacesTableViewCell
+        cell?.placeCell = MapData.places[indexPath.row]
+        return cell!
+    }
+    
+    
 }
 

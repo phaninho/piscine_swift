@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Hello My Friends-->
+        <!--Map Time My Friends-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="MapTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hello My Friends" image="icons8-symbole-star-trek-26" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Map Time My Friends" image="icons8-symbole-star-trek-26" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="MapView" destination="UYU-d7-lPg" id="aha-hp-5sG"/>
                     </connections>
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--go to second page-->
+        <!--List of pLaces-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="MapTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,21 +81,66 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-jg-Oq1">
+                                <rect key="frame" x="0.0" y="-14.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placesCell" rowHeight="153" id="4H5-EY-EYu" customClass="PlacesTableViewCell" customModule="MapTime">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="153"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4H5-EY-EYu" id="2JW-pd-t59">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="152.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-NG-Za1">
+                                                    <rect key="frame" x="15" y="50" width="345" height="52"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="4A0-NG-Za1" secondAttribute="bottom" constant="50.5" id="5so-Xb-szI"/>
+                                                <constraint firstItem="4A0-NG-Za1" firstAttribute="top" secondItem="2JW-pd-t59" secondAttribute="top" constant="50" id="Ms1-ca-j3J"/>
+                                                <constraint firstItem="4A0-NG-Za1" firstAttribute="leading" secondItem="2JW-pd-t59" secondAttribute="leading" constant="15" id="SRt-pb-2J2"/>
+                                                <constraint firstItem="4A0-NG-Za1" firstAttribute="centerY" secondItem="2JW-pd-t59" secondAttribute="centerY" id="fcC-7B-qib"/>
+                                                <constraint firstAttribute="trailing" secondItem="4A0-NG-Za1" secondAttribute="trailing" constant="15" id="tP1-Ml-aks"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="placesCellLabel" destination="4A0-NG-Za1" id="4Ga-9l-Wgq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="WkX-K0-JYg"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="q2O-Tj-LQn"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="sIY-jg-Oq1" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="Dot-OM-SFe"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="sIY-jg-Oq1" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" id="Oq2-a1-9bV"/>
+                            <constraint firstItem="sIY-jg-Oq1" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="TwU-iL-Zsg"/>
+                            <constraint firstItem="sIY-jg-Oq1" firstAttribute="centerY" secondItem="O1u-W8-tvY" secondAttribute="centerY" id="Xzk-fx-91u"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="go to second page" image="icons8-rockstar-games-24" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="List of pLaces" image="icons8-rockstar-games-24" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="SecondTableView" destination="sIY-jg-Oq1" id="bPn-dC-p7N"/>
+                        <outlet property="tableView" destination="sIY-jg-Oq1" id="3xH-rx-b3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -113,7 +158,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-50" y="-127"/>
         </scene>
     </scenes>
     <resources>

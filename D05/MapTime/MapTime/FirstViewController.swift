@@ -10,62 +10,75 @@ import UIKit
 import MapKit
 import CoreLocation
 
-final class PlaceAnnotation: NSObject, MKAnnotation
-{
-    var coordinate: CLLocationCoordinate2D    
-    var title: String?
-    var subtitle: String?
+class FirstViewController: UIViewController, AddMapDataDelegate {
     
-    init(coordinate: CLLocationCoordinate2D, title: String?, subtitle: String?)
-    {
-        self.coordinate = coordinate
-        self.title = title
-        self.subtitle = subtitle
-        
-        super.init()
+    func addMapData(content: Mapbox) {
+        print("ON ADD MAP =================>")
+        ChangepositionOnMapView(content)
     }
     
-    var region: MKCoordinateRegion
-    {
-        let latDelta:Double = 0.025
-        let lngDelta:Double = 0.025
-        print("======zoomspan===========")
-        let zoomSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
-        return MKCoordinateRegion(center: coordinate, span: zoomSpan)
-    }
-   
-}
-
-class FirstViewController: UIViewController {
-
+    
     @IBOutlet weak var MapView: MKMapView!
     
     let LocationManger = CLLocationManager()
     
     var centerMapButton: MKUserTrackingButton?
+   
+    var maps: [Mapbox]?
+    var currentTitle: String?
+    var currentSubtitle: String?
+    var currentLatitude: Double?
+    var currentLongitude: Double?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         MapView.register(MKMarkerAnnotationView.self,
                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
+        print("je rentre")
         self.centerMapButton = MKUserTrackingButton.init(mapView: self.MapView)
         setupUserTrackingButtonAndScaleView()
+        setViewOnce()
 //        let ftcoordinate = CLLocationCoordinate2DMake(48.896632, 2.318638)
-//        let ftannotation = PlaceAnnotation(coordinate: ftcoordinate, title: "42", subtitle: "42 est l'ensemble de trois établissements privés d’autoformation en informatique situés pour l'un en France, un en Belgique et pour l'autre aux États-Unis.")
-        
+//        let ftannotation = PlaceAnnotation( title: "42", subtitle: "42 est l'ensemble de trois établissements privés d’autoformation en informatique situés pour l'un en France, un en Belgique et pour l'autre aux États-Unis.", latitude: 48.896632, longitude: 2.318638)
 //        MapView.addAnnotation(ftannotation)
 //        MapView.setRegion(ftannotation.region, animated: true)
-
-//        let latitude:Double = 48.896632
-//        let longitude:Double = 2.318638
 //
-//        let locationcoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-
-//        self.MapView.setRegion(region, animated: true)
+////        let latitude:Double = 48.896632
+////        let longitude:Double = 2.318638
+////
+////        let locationcoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//
+//        self.MapView.setRegion(ftannotation.region, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let nav = segue.destination as? UINavigationController, let SecondViewController = nav.topViewController as? SecondViewController {
+            SecondViewController.delegate = self
+        }
+    }
+    
+    func ChangepositionOnMapView(_ content: Mapbox?) {
+
+        currentTitle = (content?.title)!
+        currentSubtitle = (content?.subtitle)!
+        currentLatitude = (content?.latitude)!
+        currentLongitude = (content?.longitude)!
+        let zoomSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(currentLatitude!, currentLongitude!)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, zoomSpan)
+        DispatchQueue.main.async {
+            self.MapView.setRegion(region, animated: true)
+        }
+//        view.backgroundColor = color
+    }
+    
+    func setViewOnce()
+    {
+        
+    }
     
     func setupUserTrackingButtonAndScaleView() {
         MapView.showsUserLocation = true
@@ -88,8 +101,13 @@ class FirstViewController: UIViewController {
                                      scale.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -10),
                                      scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)])
     }
-
-   
+//
+//    func loadMap(placesArray: [MapData]) {
+//        self.forumTopics = placesArray
+//        print(topicsArray.count)
+//        tableView.reloadData()
+//    }
+//
 }
 
 

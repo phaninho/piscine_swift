@@ -14,6 +14,11 @@
 		F462363A20C4C6B600954EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F462363920C4C6B600954EF2 /* Assets.xcassets */; };
 		F462363D20C4C6B600954EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462363B20C4C6B600954EF2 /* LaunchScreen.storyboard */; };
 		F462364520C4EAD900954EF2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462364420C4EAD900954EF2 /* MapViewController.swift */; };
+		F493A44920C5AEBF00E17323 /* placesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A44820C5AEBF00E17323 /* placesModel.swift */; };
+		F493A44B20C5B0AD00E17323 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A44A20C5B0AD00E17323 /* PlaceAnnotation.swift */; };
+		F493A44D20C5BEC600E17323 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A44C20C5BEC600E17323 /* PlacesTableViewCell.swift */; };
+		F493A44F20C5E7C700E17323 /* RefreshMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A44E20C5E7C700E17323 /* RefreshMapViewController.swift */; };
+		F493A45120C5EF2800E17323 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A45020C5EF2800E17323 /* Structures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		F462363C20C4C6B600954EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F462363E20C4C6B600954EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F462364420C4EAD900954EF2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F493A44820C5AEBF00E17323 /* placesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = placesModel.swift; sourceTree = "<group>"; };
+		F493A44A20C5B0AD00E17323 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		F493A44C20C5BEC600E17323 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		F493A44E20C5E7C700E17323 /* RefreshMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshMapViewController.swift; sourceTree = "<group>"; };
+		F493A45020C5EF2800E17323 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +70,12 @@
 			children = (
 				F462363020C4C6B500954EF2 /* AppDelegate.swift */,
 				F462364420C4EAD900954EF2 /* MapViewController.swift */,
+				F493A44E20C5E7C700E17323 /* RefreshMapViewController.swift */,
+				F493A44C20C5BEC600E17323 /* PlacesTableViewCell.swift */,
+				F493A45020C5EF2800E17323 /* Structures.swift */,
+				F493A44A20C5B0AD00E17323 /* PlaceAnnotation.swift */,
 				F462363220C4C6B500954EF2 /* FirstViewController.swift */,
+				F493A44820C5AEBF00E17323 /* placesModel.swift */,
 				F462363420C4C6B500954EF2 /* SecondViewController.swift */,
 				F462363620C4C6B500954EF2 /* Main.storyboard */,
 				F462363920C4C6B600954EF2 /* Assets.xcassets */,
@@ -147,10 +162,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F493A44B20C5B0AD00E17323 /* PlaceAnnotation.swift in Sources */,
+				F493A45120C5EF2800E17323 /* Structures.swift in Sources */,
 				F462363520C4C6B500954EF2 /* SecondViewController.swift in Sources */,
+				F493A44D20C5BEC600E17323 /* PlacesTableViewCell.swift in Sources */,
 				F462363120C4C6B500954EF2 /* AppDelegate.swift in Sources */,
 				F462363320C4C6B500954EF2 /* FirstViewController.swift in Sources */,
 				F462364520C4EAD900954EF2 /* MapViewController.swift in Sources */,
+				F493A44F20C5E7C700E17323 /* RefreshMapViewController.swift in Sources */,
+				F493A44920C5AEBF00E17323 /* placesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
