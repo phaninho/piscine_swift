@@ -55,7 +55,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         print("tomapView============>")
         let firstView = tabBarController?.viewControllers![0] as! FirstViewController
-        firstView.copyData(map: map)
+        firstView.updateMapData(map: map)
 //        let region = MKCoordinateRegionMakeWithDistance(locations[indexPath.item].annotationPin.coordinate, 3000, 3000)
 //        firstView.mapView.setRegion(region, animated: true)
         tabBarController?.selectedIndex = 0
