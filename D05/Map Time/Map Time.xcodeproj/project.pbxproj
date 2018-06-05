@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DD89EB220C7015900BA1D05 /* PlacesAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD89EB120C7015900BA1D05 /* PlacesAnnotations.swift */; };
 		F493A48320C62BBE00E17323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A48220C62BBE00E17323 /* AppDelegate.swift */; };
 		F493A48520C62BBE00E17323 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A48420C62BBE00E17323 /* FirstViewController.swift */; };
 		F493A48720C62BBE00E17323 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A48620C62BBE00E17323 /* SecondViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DD89EB120C7015900BA1D05 /* PlacesAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAnnotations.swift; sourceTree = "<group>"; };
 		F493A47F20C62BBE00E17323 /* Map Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F493A48220C62BBE00E17323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F493A48420C62BBE00E17323 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				F493A48220C62BBE00E17323 /* AppDelegate.swift */,
 				F493A48420C62BBE00E17323 /* FirstViewController.swift */,
+				1DD89EB120C7015900BA1D05 /* PlacesAnnotations.swift */,
 				F493A49820C62E4000E17323 /* PlacesTableViewCell.swift */,
 				F493A48620C62BBE00E17323 /* SecondViewController.swift */,
 				F493A48820C62BBE00E17323 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			files = (
 				F493A48720C62BBE00E17323 /* SecondViewController.swift in Sources */,
 				F493A49B20C639BE00E17323 /* Structures.swift in Sources */,
+				1DD89EB220C7015900BA1D05 /* PlacesAnnotations.swift in Sources */,
 				F493A49720C62E1D00E17323 /* placesModel.swift in Sources */,
 				F493A49920C62E4000E17323 /* PlacesTableViewCell.swift in Sources */,
 				F493A48320C62BBE00E17323 /* AppDelegate.swift in Sources */,
@@ -298,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Map Time/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "piscine-swift.Map-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,7 +317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Map Time/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "piscine-swift.Map-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class FirstViewController: UIViewController, ChangeMapDataDelegate {
+class FirstViewController: UIViewController {
 
     var curtitle = String()
     var cursubtitle = String()
@@ -25,24 +25,16 @@ class FirstViewController: UIViewController, ChangeMapDataDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("on est dams le didload du firstviewcontroller")
+        print(curtitle, " ", cursubtitle)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    func sayHello() {
-        print("Hello!")
+    func copyData(map: Mapbox)
+    {
+        print("dans le first view copy data")
+        print(map.title, " ", map.subtitle)
+          print("on sort dans le first view copy data")
     }
-    
-    func sayGoodbye() {
-        print("Goodbye!")
-    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        print("++++++++++++++Dns le prepare segue de FIRSTVIEEWCONTROLLER===============")
-//        if let nav = segue.destination as? UINavigationController, let SecondViewController = nav.topViewController as? SecondViewController {
-//            SecondViewController.delegate = self
-//        }
-//    }
-
-
 }
 
