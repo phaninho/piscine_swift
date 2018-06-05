@@ -14,6 +14,12 @@ class customImageView: UIImageView{
     
     var imageUrlString: String?
     
+//    let activityIndicator: UIActivityIndicatorView = {
+//        let aiv = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+//        aiv.translatesAutoresizingMaskIntoConstraints = false
+//        return aiv
+//    }()
+    
     func loadImageWithURL(urlString: String)
     {
         imageUrlString = urlString

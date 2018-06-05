@@ -37,7 +37,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         fetchImages()
         
         navigationItem.title = "Home"
-        collectionView?.backgroundColor = UIColor.white
+        collectionView?.backgroundColor = UIColor.black
         collectionView?.register(imageCell.self, forCellWithReuseIdentifier: "cellId")
     }
 

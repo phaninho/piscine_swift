@@ -19,9 +19,30 @@ class imageCell: UICollectionViewCell
         }
     }
     
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        aiv.translatesAutoresizingMaskIntoConstraints = false
+        aiv.startAnimating()
+        return aiv
+    }()
+    
+    let controlsContainerView: UIView =
+    {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         self.setupViews()
+        controlsContainerView.frame = frame
+        addSubview(controlsContainerView)
+        controlsContainerView.addSubview(activityIndicatorView)
+        
+        activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
     func setupThumbNaiImage()
@@ -45,19 +66,27 @@ class imageCell: UICollectionViewCell
     
     let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .gray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     func setupViews()
     {
+        
         addSubview(thumbnailImageView)
+    
+//        activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor)
+//
+//        activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)
         addSubview(separatorView)
         
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView]))
         
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-[v1(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView, "v1": separatorView]))
+        
+//        activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+//        activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": separatorView]))
     }
