@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     var dynamicAnimator = UIDynamicAnimator()
     
+    var gravityBehavior = UIGravityBehavior()
+    
     var forms = [UIDynamicItem]()
 
     override func viewDidLoad() {
@@ -23,8 +25,6 @@ class ViewController: UIViewController {
     
     func initGestures()
     {
-        let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture(_:)))
-        view.addGestureRecognizer(gesture)
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         view.addGestureRecognizer(tap)
     }
@@ -50,28 +50,32 @@ class ViewController: UIViewController {
         addPhysic(forms: forms)
     }
 
-    @objc func panGesture(_ sender: UIPanGestureRecognizer) {
-        switch sender.state
-        {
-            case .began:
-                    print("dans le began")
-            case .changed:
-                print("Ca change ", sender.location(in: view))
-            case .ended:
-                    print("fin de geture")
-            case .failed:
-                    print("dans fail")
-            case .possible:
-                    print("dans possible")
-            case .cancelled:
-                print("Cancelled")
+    @objc func panGesture(gesture: UIPanGestureRecognizer)
+    {
+        switch gesture.state {
+        case .began:
+            print("began")
+            self.gravityBehavior.removeItem(gesture.view!)
+        case .changed:
+            print("moove")
+            gesture.view?.center = gesture.location(in: gesture.view?.superview)
+            dynamicAnimator.updateItem(usingCurrentState: gesture.view!)
+        case .ended:
+            print("end")
+            self.gravityBehavior.addItem(gesture.view!)
+        default:
+            print("error")
         }
+
     }
+
     
     func createGeometry(position: CGPoint)
     {
         let newView = GeometryForm().randForm(position: position)
         self.view.addSubview(newView)
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
+        newView.addGestureRecognizer(gesture)
         forms.append(newView)
     }
     
@@ -79,7 +83,7 @@ class ViewController: UIViewController {
     {
         dynamicAnimator = UIDynamicAnimator(referenceView: view)
         
-        let gravityBehavior = UIGravityBehavior(items: forms)
+        gravityBehavior = UIGravityBehavior(items: forms)
         gravityBehavior.magnitude = 1//CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         dynamicAnimator.addBehavior(gravityBehavior)
         
@@ -87,9 +91,10 @@ class ViewController: UIViewController {
         collision.translatesReferenceBoundsIntoBoundary = true
         dynamicAnimator.addBehavior(collision)
 
-        let itemBeha = UIDynamicItemBehavior()
-        itemBeha.elasticity = 1.0
-        itemBeha.density = 0.1
+        let itemBeha = UIDynamicItemBehavior(items: forms)
+        itemBeha.elasticity = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        itemBeha.density = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         dynamicAnimator.addBehavior(itemBeha)
+
     }
 }

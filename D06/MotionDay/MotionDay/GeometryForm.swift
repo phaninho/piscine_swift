@@ -9,14 +9,9 @@
 import Foundation
 import UIKit
 
-class GeometryForm: UIView {
+class GeometryForm: UIView
+{
     
-//    var form = GeometryForm(){
-//        didSet{
-//            print("dans le didset du geo")
-//        }
-//    }
-
     func randForm(position: CGPoint) -> UIView
     {
         if (arc4random_uniform(2) == 0) {
