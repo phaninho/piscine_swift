@@ -10,25 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let gravityBehavior = UIGravityBehavior()
+    var dynamicAnimator = UIDynamicAnimator()
     
-    let dynamicAnimator = UIDynamicAnimator()
-    
-    let collision = UICollisionBehavior()
-    
-    var forms: [GeometryForm] = []
-    
-    
+    var forms = [UIDynamicItem]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        gravityBehavior.magnitude = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-//        print(gravityBehavior.magnitude)
-//        collision.translatesReferenceBoundsIntoBoundary = true
-//        dynamicAnimator.addBehavior(collision)
-//        dynamicAnimator.addBehavior(gravityBehavior)
-//        gravityBehavior.addItem(myView)
+        
         initGestures()
     }
+
     
     func initGestures()
     {
@@ -37,23 +28,28 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         view.addGestureRecognizer(tap)
     }
+
+    
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
+
         var position = sender.location(in: view)
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
 //        let screenHeight = screenSize.height
-        if (position.x < 50)
+
+        if (position.x < 30)
         {
-            position.x = 50
+            position.x = 30
         }
-        else if (position.x > screenWidth - 50)
+        else if (position.x > screenWidth - 30)
         {
-            position.x = screenWidth - 50
+            position.x = screenWidth - 30
         }
         createGeometry(position: position)
+        addPhysic(forms: forms)
     }
-    
+
     @objc func panGesture(_ sender: UIPanGestureRecognizer) {
         switch sender.state
         {
@@ -75,12 +71,25 @@ class ViewController: UIViewController {
     func createGeometry(position: CGPoint)
     {
         let newView = GeometryForm().randForm(position: position)
-        gravityBehavior.magnitude = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        self.view.addSubview(newView)
+        forms.append(newView)
+    }
+    
+    func addPhysic(forms: [UIDynamicItem])
+    {
+        dynamicAnimator = UIDynamicAnimator(referenceView: view)
+        
+        let gravityBehavior = UIGravityBehavior(items: forms)
+        gravityBehavior.magnitude = 1//CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         dynamicAnimator.addBehavior(gravityBehavior)
+        
+        let collision = UICollisionBehavior(items: forms)
         collision.translatesReferenceBoundsIntoBoundary = true
         dynamicAnimator.addBehavior(collision)
-        gravityBehavior.addItem(newView)
-        self.view.addSubview(newView)
-//        forms.append(newView)
+
+        let itemBeha = UIDynamicItemBehavior()
+        itemBeha.elasticity = 1.0
+        itemBeha.density = 0.1
+        dynamicAnimator.addBehavior(itemBeha)
     }
 }

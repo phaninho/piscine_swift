@@ -27,7 +27,7 @@ class GeometryForm: UIView {
     
     func createSquares(position: CGPoint) -> UIView
     {
-        let rect = CGRect(x:position.x - 50, y: position.y - 50, width: 100, height: 100)
+        let rect = CGRect(x:position.x - 30, y: position.y - 30, width: 60, height: 60)
         let myView = UIView(frame: rect)
         myView.backgroundColor = randColor()
         return myView
@@ -35,10 +35,10 @@ class GeometryForm: UIView {
     
     func createCircles(position: CGPoint) -> UIView
     {
-        let rect = CGRect(x:position.x - 50, y: position.y - 50, width: 100, height: 100)
+        let rect = CGRect(x:position.x - 30, y: position.y - 30, width: 60, height: 60)
         let myView = UIView(frame: rect)
         myView.backgroundColor = randColor()
-        myView.layer.cornerRadius = 50
+        myView.layer.cornerRadius = 30
         return myView
     }
     
