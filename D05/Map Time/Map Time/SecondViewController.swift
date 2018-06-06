@@ -41,14 +41,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let md = Mapbox(title: MapData.places[indexPath.row].0,subtitle: MapData.places[indexPath.row].1,latitude: MapData.places[indexPath.row].2,longitude: MapData.places[indexPath.row].3)
         mapbox = md
-//        print(md.title, " ", md.subtitle)
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: "FirstViewController")
-//        self.delegate?.changeMapData(content: md)
         toMapView(map: md)
-//        self.navigationController?.pushViewController(viewController!, animated: true)
-//        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstViewController")
-//        self.present(viewController, animated: false, completion: nil)
-        
     }
 
     func toMapView(map: Mapbox)
