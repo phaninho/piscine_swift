@@ -73,6 +73,28 @@ class ViewController: UIViewController {
         gesture.scale = 1.0
         
     }
+    
+    @objc func rotationGesture(gesture: UIRotationGestureRecognizer)
+    {
+        var lastRotation: CGFloat = 0
+        var originalRotation = CGFloat()
+        if gesture.state == .began
+        {
+            
+            gesture.rotation = lastRotation
+            originalRotation = gesture.rotation
+        }
+        else if gesture.state == .changed
+        {
+            let newRotation = gesture.rotation + originalRotation
+            gesture.view?.transform = CGAffineTransform(rotationAngle: newRotation)
+        }
+        else if gesture.state == .ended
+        {
+            // Save the last rotation
+            lastRotation = gesture.rotation
+        }
+    }
 
     
     func createGeometry(position: CGPoint)
@@ -83,6 +105,8 @@ class ViewController: UIViewController {
         newView.addGestureRecognizer(gesture)
         let zoomGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchGesture))
         newView.addGestureRecognizer(zoomGesture)
+        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotationGesture))
+        newView.addGestureRecognizer(rotateGesture)
         forms.append(newView)
     }
     
