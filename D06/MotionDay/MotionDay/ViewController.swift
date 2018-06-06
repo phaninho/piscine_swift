@@ -54,19 +54,24 @@ class ViewController: UIViewController {
     {
         switch gesture.state {
         case .began:
-            print("began")
             self.gravityBehavior.removeItem(gesture.view!)
         case .changed:
-            print("moove")
             gesture.view?.center = gesture.location(in: gesture.view?.superview)
             dynamicAnimator.updateItem(usingCurrentState: gesture.view!)
         case .ended:
-            print("end")
             self.gravityBehavior.addItem(gesture.view!)
         default:
             print("error")
         }
 
+    }
+    
+    @objc func pinchGesture(gesture: UIPinchGestureRecognizer)
+    {
+        self.view.bringSubview(toFront: view)
+        gesture.view?.transform = (gesture.view?.transform)!.scaledBy(x: gesture.scale, y: gesture.scale)
+        gesture.scale = 1.0
+        
     }
 
     
@@ -76,6 +81,8 @@ class ViewController: UIViewController {
         self.view.addSubview(newView)
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
         newView.addGestureRecognizer(gesture)
+        let zoomGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchGesture))
+        newView.addGestureRecognizer(zoomGesture)
         forms.append(newView)
     }
     
