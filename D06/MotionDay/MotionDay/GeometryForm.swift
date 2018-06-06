@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 class GeometryForm: UIView {
+    
+//    var form = GeometryForm(){
+//        didSet{
+//            print("dans le didset du geo")
+//        }
+//    }
 
     func randForm(position: CGPoint) -> UIView
     {
@@ -43,7 +49,7 @@ class GeometryForm: UIView {
         switch rand
         {
             case 0:
-                return .red
+                return .magenta
             case 1:
                 return .black
             case 2:
@@ -59,7 +65,7 @@ class GeometryForm: UIView {
             case 7:
                 return .cyan
             default:
-                return .magenta
+                return .red
         }
     }
 }

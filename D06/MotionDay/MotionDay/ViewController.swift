@@ -9,20 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    let myView = UIView(frame: CGRect(x:0, y: 0, width: 100, height: 100))
     
     let gravityBehavior = UIGravityBehavior()
     
     let dynamicAnimator = UIDynamicAnimator()
     
+    let collision = UICollisionBehavior()
+    
+    var forms: [GeometryForm] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ca demarre")
-//        gravityBehavior.magnitude = 100
-        dynamicAnimator.addBehavior(gravityBehavior)
-        gravityBehavior.addItem(myView)
-//        view.addSubview(myView)
+//        gravityBehavior.magnitude = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+//        print(gravityBehavior.magnitude)
+//        collision.translatesReferenceBoundsIntoBoundary = true
+//        dynamicAnimator.addBehavior(collision)
+//        dynamicAnimator.addBehavior(gravityBehavior)
+//        gravityBehavior.addItem(myView)
         initGestures()
     }
     
@@ -31,13 +35,23 @@ class ViewController: UIViewController {
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture(_:)))
         view.addGestureRecognizer(gesture)
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-//        tap.delegate = self
         view.addGestureRecognizer(tap)
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Hello tap")
-        createGeometry(position: sender.location(in: view))
+        var position = sender.location(in: view)
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+//        let screenHeight = screenSize.height
+        if (position.x < 50)
+        {
+            position.x = 50
+        }
+        else if (position.x > screenWidth - 50)
+        {
+            position.x = screenWidth - 50
+        }
+        createGeometry(position: position)
     }
     
     @objc func panGesture(_ sender: UIPanGestureRecognizer) {
@@ -60,11 +74,13 @@ class ViewController: UIViewController {
     
     func createGeometry(position: CGPoint)
     {
-       let newView = GeometryForm().randForm(position: position)
+        let newView = GeometryForm().randForm(position: position)
+        gravityBehavior.magnitude = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        dynamicAnimator.addBehavior(gravityBehavior)
+        collision.translatesReferenceBoundsIntoBoundary = true
+        dynamicAnimator.addBehavior(collision)
         gravityBehavior.addItem(newView)
         self.view.addSubview(newView)
+//        forms.append(newView)
     }
-    
-   
 }
-
