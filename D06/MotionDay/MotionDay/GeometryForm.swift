@@ -1,0 +1,65 @@
+//
+//  GeometryForm.swift
+//  MotionDay
+//
+//  Created by Stephane MARTINS on 6/6/18.
+//  Copyright © 2018 Stephane MARTINS. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class GeometryForm: UIView {
+
+    func randForm(position: CGPoint) -> UIView
+    {
+        if (arc4random_uniform(2) == 0) {
+            return createSquares(position: position)
+        }
+        return createCircles(position: position)
+    }
+    
+    func createSquares(position: CGPoint) -> UIView
+    {
+        let rect = CGRect(x:position.x - 50, y: position.y - 50, width: 100, height: 100)
+        let myView = UIView(frame: rect)
+        myView.backgroundColor = randColor()
+        return myView
+    }
+    
+    func createCircles(position: CGPoint) -> UIView
+    {
+        let rect = CGRect(x:position.x - 50, y: position.y - 50, width: 100, height: 100)
+        let myView = UIView(frame: rect)
+        myView.backgroundColor = randColor()
+        myView.layer.cornerRadius = 50
+        return myView
+    }
+    
+    func randColor() -> UIColor
+    {
+        let rand = arc4random_uniform(7)
+        
+        switch rand
+        {
+            case 0:
+                return .red
+            case 1:
+                return .black
+            case 2:
+                return .green
+            case 3:
+                return .yellow
+            case 4:
+                return .blue
+            case 5:
+                return .purple
+            case 6:
+                return .brown
+            case 7:
+                return .cyan
+            default:
+                return .magenta
+        }
+    }
+}
