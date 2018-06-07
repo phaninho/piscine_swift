@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjM-YU-8vF">
                                 <rect key="frame" x="162" y="328.5" width="51" height="30"/>
                                 <state key="normal" title="Ask Me"/>
+                                <connections>
+                                    <action selector="askMeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxp-Yc-ywe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-Uj-8pp">
                                 <rect key="frame" x="16" y="377" width="343" height="170"/>
@@ -28,31 +31,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bha-qa-SFF">
-                                <rect key="frame" x="22" y="204" width="330" height="93"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Da-7d-BkG">
+                                <rect key="frame" x="16" y="236" width="343" height="30"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EjM-YU-8vF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1rk-Qc-uR2"/>
+                            <constraint firstItem="8Da-7d-BkG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GHd-Xb-0H7"/>
                             <constraint firstItem="EjM-YU-8vF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PO1-ua-qbr"/>
-                            <constraint firstItem="bha-qa-SFF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="184" id="Saj-ZI-6qc"/>
-                            <constraint firstItem="EjM-YU-8vF" firstAttribute="top" secondItem="bha-qa-SFF" secondAttribute="bottom" constant="31.5" id="e0B-Xc-VMI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9a9-Uj-8pp" secondAttribute="bottom" constant="120" id="eEk-NZ-YCJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9a9-Uj-8pp" secondAttribute="trailing" constant="16" id="hOk-Tn-blg"/>
-                            <constraint firstItem="bha-qa-SFF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="jZ5-jb-9Mn"/>
-                            <constraint firstItem="bha-qa-SFF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wHu-ke-zi2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Da-7d-BkG" secondAttribute="trailing" constant="16" id="hhs-me-hle"/>
+                            <constraint firstItem="EjM-YU-8vF" firstAttribute="top" secondItem="8Da-7d-BkG" secondAttribute="bottom" constant="62.5" id="qSq-g3-xoa"/>
                             <constraint firstItem="9a9-Uj-8pp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zeW-3N-hfs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="9a9-Uj-8pp" id="8fJ-NL-Q77"/>
-                        <outlet property="askButton" destination="EjM-YU-8vF" id="TI7-0T-vVf"/>
-                        <outlet property="textField" destination="bha-qa-SFF" id="Jc0-YJ-xLW"/>
+                        <outlet property="textField" destination="8Da-7d-BkG" id="EJe-Ep-RIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  recast
 //
@@ -8,44 +7,80 @@
 
 import UIKit
 import RecastAI
+import ForecastIO
 
 class ViewController: UIViewController {
 
 
 //    var bot : RecastAIClient?
     
-    @IBOutlet weak var textField: UITextView!
-    
-    @IBOutlet weak var askButton: UIButton!
+
+    @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var answerLabel: UILabel!
     
-     let bot = RecastAIClient(token : "4402e9599b7a4a7ed200f1d826db9d59", language: "english")
+    @IBAction func askMeBtn(_ sender: Any) {
+        if (textField.text != "")
+        {
+            makeRequest(str: textField.text!)
+        }
+    }
+    
+    let bot = RecastAIClient(token : "4402e9599b7a4a7ed200f1d826db9d59", language: "en")
+    let forecastClient = DarkSkyClient(apiKey: "a4cfa3b0ee1c496ee301efaae61d7651")
+   
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        self.bot = RecastAIClient(token : "4402e9599b7a4a7ed200f1d826db9d59")
-//        self.bot = RecastAIClient(token : "4402e9599b7a4a7ed200f1d826db9d59", language: "english")
     }
 
    
-    func makeRequest()
+    func makeRequest(str: String)
     {
-        //Call makeRequest with string parameter to make a text request
-        self.bot.textRequest("Paris", successHandler: success, failureHandle: fail)
+        self.bot.textRequest(str, successHandler: recastRequestDone, failureHandle: fail)
     }
     
-    func success(Response: Response) -> Void
+    func recastRequestDone(_ response : Response)
     {
-        print("request works")
+        if let location = response.get(entity: "location")
+        {
+            for local in location
+            {
+                answerLabel.text = local.value.string
+            }
+            let lng = location["lng"]?.doubleValue
+            let lat = location["lat"]?.doubleValue
+            if (lng != nil && lat != nil)
+            {
+                forecastRequest(lat: lat!, lng: lng!)
+            }
+        }
+        
+//        for local in location!
+//        {
+//            print(" ==>> ", local)
+//        }
     }
     
-    func fail() -> Void
+    func fail(response: Error) -> Void
     {
-        print("failed")
+        print("Error")
     }
-
+    
+    func forecastRequest(lat: Double, lng: Double)
+    {
+        print("dans le forecast")
+        forecastClient.getForecast(latitude: lat, longitude: lng) { result in
+            switch result {
+            case .success(let currentForecast, let requestMetadata):
+                DispatchQueue.main.async{
+                    self.answerLabel.text = currentForecast.currently?.summary
+                }
+            case .failure(let error):
+                print("Error")
+            }
+        }
+    }
 }
 
